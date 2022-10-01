@@ -4,8 +4,8 @@ import Bg from './components/bg/Bg';
 import Competences from './components/competences/Competences';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import Head from './components/head/Head';
 import Header from './components/header/Header';
-import Navigations from './components/navigations/Navigations';
 import Portfolio from './components/portfolio/Portfolio';
 import Skills from './components/skills/Skills';
 
@@ -13,8 +13,8 @@ const App = () => {
     return (
         <div>
             <Bg />
+            <Head />
             <Header />
-            <Navigations />
             <About />
             <Competences />
             <Skills />

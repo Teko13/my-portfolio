@@ -6,19 +6,26 @@ import HeaderSocial from './HeaderSocial';
 
 const Header = () => {
     return (
-        <header id='#header'>
+        <section id='header'>
             <div className="container header__container">
-                <h5>Hello Moi c'est</h5>
-                <h1>Teko</h1>
-                <h5 className="text-light">Developpeur Web</h5>
-                <CTA />
-                <HeaderSocial />
                 <div className="me">
                     <img src={ME} alt="" />
                 </div>
-                <a href="#footer" className="scroll__down">Aller au pied de page</a>
+                <h5>Hello Moi c'est</h5>
+                <h1>Teko</h1>
+                <h5 className="text-light">Developpeur Web</h5>
+                <HeaderSocial />
+                <CTA />
             </div>
-        </header>
+            <div className="scroll-down">
+                <a href="#footer" className="mouse-wrapper">
+                    <span>Voir bas de page</span>
+                    <span className='mouse'>
+                        <span>wheel</span>
+                    </span>
+                </a>
+            </div>
+        </section>
     );
 };
 

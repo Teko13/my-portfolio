@@ -1,0 +1,30 @@
+header.head-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.334);
+    backdrop-filter: blur(2rem);
+    z-index: 6;
+}
+
+.head__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .6rem;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+.nav__list li a {
+    color: white;
+}
