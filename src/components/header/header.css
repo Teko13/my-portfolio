@@ -54,14 +54,45 @@
     bottom: 1rem;
 }
 
+.mouse {
+    border: 2px solid white;
+    display: block;
+    height: 1.75rem;
+    width: 1.25rem;
+    margin: auto;
+    border-radius: .7rem;
+}
+
+@keyframes animMouse {
+    0% {
+        top: 40%;
+    }
+
+
+    100% {
+        top: 50%;
+    }
+}
+
+.mouse .whell {
+    background: white;
+    border-radius: 50%;
+    height: .25rem;
+    width: .25rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+    animation: animMouse 500ms linear forwards alternate infinite;
+}
+
 
 
 
 /*==================MEDIA QUERIES (SMALL DEVICE)*/
 @media screen and (max-width: 600px) {
-    header {
-        height: 100vh;
-    }
+    header {}
 
 
 

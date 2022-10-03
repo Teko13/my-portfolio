@@ -19,9 +19,8 @@ const Header = () => {
             </div>
             <div className="scroll-down">
                 <a href="#footer" className="mouse-wrapper">
-                    <span>Voir bas de page</span>
                     <span className='mouse'>
-                        <span>wheel</span>
+                        <span className='whell'></span>
                     </span>
                 </a>
             </div>
