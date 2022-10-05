@@ -6,11 +6,18 @@
 
 .about__content {
     background-color: var(--color-bg-variant);
+    border: 1px solid transparent;
     display: grid;
     grid-template-columns: 50% 40%;
     gap: 6%;
     padding: 4%;
     border-radius: 1rem;
+    transition: all 400ms ease;
+}
+
+.about__content:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
 }
 
 .about__content .skills {
@@ -87,18 +94,20 @@
 }
 
 .about__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    padding: 0 7rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 .about__card {
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: .5rem;
     text-align: center;
     transition: var(--transition);
+    width: 12rem;
 }
 
 .about__card:hover {
@@ -122,6 +131,7 @@
 }
 
 .about__content p {
+    margin-bottom: .5rem;
     color: var(--color-light);
 }
 

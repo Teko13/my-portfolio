@@ -59,6 +59,30 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <div className="about__cards">
+                <article className="about__card">
+                    <FaAward className='about__icon' />
+                    <h5>Diplôme</h5>
+                    <small>Titre RNCP niveau 5 (bac+2)</small>
+                </article>
+                <article className="about__card">
+                    <VscFolderLibrary className='about__icon' />
+                    <h5>Projets</h5>
+                    <small>Pluisieur projet pro valider et soutenus</small>
+                </article>
+                <article className="about__card">
+                    <FiUser className='about__icon' />
+                    <h5>Soft skills</h5>
+                    <small>
+                        <ul>
+                            <li>Autonomie</li>
+                            <li>Curiosité</li>
+                            <li>Rigueur</li>
+                            <li>Persévérance</li>
+                        </ul>
+                    </small>
+                </article>
+            </div>
         </section>
     );
 };
