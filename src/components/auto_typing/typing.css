@@ -1,0 +1,18 @@
+.text-content {
+    display: inline;
+    color: white;
+    display: inline;
+}
+
+.cursor {
+    display: inline-block;
+    margin: 0;
+
+    transform: translateY(5px);
+    width: 10px;
+    height: 20px;
+    background: white;
+}
+.cursor.disabled {
+    display: none;
+}

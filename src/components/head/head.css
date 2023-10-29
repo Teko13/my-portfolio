@@ -12,7 +12,7 @@ header.head-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .6rem;
+    overflow: hidden;
 }
 
 .nav__list {
@@ -27,4 +27,42 @@ header.head-container {
 
 .nav__list li a {
     color: white;
+}
+.nav-logo {
+    display: block;
+    width: 13rem;
+    height: 3rem;
+    overflow: visible;
+    transform: translateY(-20px);
+}
+.smallscreen {
+    width: 5rem;
+    display: none;
+}
+.abs {
+    position: fixed;
+}
+.head-icon {
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+/*==================MEDIA QUERIES (SMALL DEVICE)*/
+@media screen and (max-width: 600px) {
+    .head-text {
+        display: none;
+    }
+    .smallscreen {
+        display: block;
+    }
+    .largescreen {
+        display: none;
+    }
+    .head-icon {
+        display: inline;
+    }
+    .nav__list {
+        gap: 2.5rem;
+    }
 }

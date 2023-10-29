@@ -1,12 +1,22 @@
 import React from 'react';
+import { useState } from 'react';
 import './contact.css'
 import { MdOutlineEmail } from 'react-icons/md'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { BsWhatsapp } from 'react-icons/bs';
+import { BsFillSendCheckFill } from "react-icons/bs";
 import { useRef } from 'react'
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
+    const [estActif, setEstActif] = useState(false);
+
+    const handleClick = () => {
+        setEstActif(!estActif);
+        setTimeout(() => {
+            setEstActif(!estActif);
+        }, 5000);
+    };
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -40,19 +50,24 @@ const Contact = () => {
                     <article className="contact__option">
                         <BsWhatsapp className='contact__option-icon' />
                         <h4>Whatsapp</h4>
-                        <h5>+33 6 18 14 57 85</h5>
-                        <a href="https://wa.me/+33618145785" target='_blank'>M'envoyer un message</a>
+                        <h5>+33 7 45 17 88 05</h5>
+                        <a href="https://wa.me/+33745178805" target='_blank'>M'envoyer un message</a>
                     </article>
                 </div>
                 <form ref={form} onSubmit={sendEmail}>
                     <input type="text" name='name' placeholder='Votre nom complet' required />
                     <input type="email" name='email' placeholder='Votre mail' required />
                     <textarea name="message" rows='7' placeholder='Votre message' required></textarea>
-                    <button className='btn btn-primary' type='submit'>Envoyer</button>
+                    <button onClick={handleClick} className='btn btn-primary' type='submit'>Envoyer</button>
+                    <span id='msg' style={{
+                        visibility: estActif ? 'visible' : 'hidden',
+                    }}>Votre message a bien été envoyer <BsFillSendCheckFill /></span>
                 </form>
             </div>
-        </section>
+        </section >
     );
 };
 
 export default Contact;
+
+

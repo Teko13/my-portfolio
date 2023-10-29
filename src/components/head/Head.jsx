@@ -1,30 +1,35 @@
-import React from 'react';
-import { GiPalette } from "react-icons/gi";
-import { TbLayoutGridAdd } from "react-icons/tb";
+import { SiAboutdotme } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
+import { BsViewList } from "react-icons/bs";
+import { MdOutlineContactPage } from "react-icons/md";
 import "./head.css";
+import LOGO_IMG_TEXT_BLEU from "../../assets/logo_img_text_bleu.svg";
+import LOGO_IMG_BLEU from "../../assets/logo_img_bleu.svg";
 
 const Head = () => {
+
+
     return (
         <header className='container head-container'>
             <nav className='head__nav'>
-                <a href="#">
-                    <h2>Teko</h2>
+                <a href="http://metapressnet.com">
+                    <span className="nav-logo largescreen">
+                        <img src={LOGO_IMG_TEXT_BLEU} alt="Logo metapress" />
+                    </span>
+                    <span className="nav-logo smallscreen">
+                        <img src={LOGO_IMG_BLEU} alt="Logo metapress" />
+                    </span>
                 </a>
                 <div className="nav__links">
                     <ul className="nav__list">
-                        <li><a href="#About">A Propos de moi</a></li>
-                        <li><a href="#competences">Compétences</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about"><span className='head-text'>Moi</span> <SiAboutdotme className='head-icon' /></a></li>
+                        <li><a href="#competences"><span className="head-text">Compétence</span> <MdDesignServices className='head-icon' /></a></li>
+                        <li><a href="#portfolio"><span className="head-text">Portfolio</span> <BsViewList className='head-icon' /></a></li>
+                        <li><a href="#contact"><span className="head-text">Contact</span> <MdOutlineContactPage className='head-icon' /></a></li>
                     </ul>
                 </div>
-                <div className="nav-btns">
-                    <span className='palette-icon'><GiPalette /></span>
-                    <div className='nav__toggle'>
-                        <span className='toggle-btn'><TbLayoutGridAdd /></span>
-                    </div>
-                </div>
             </nav>
+            {/* <div className='abs'>{current}, {height}, {document.documentElement.clientHeight} </div> */}
         </header>
     );
 };

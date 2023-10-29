@@ -1,6 +1,7 @@
 import React from 'react';
 import './competences.css'
 import { BsPatchCheckFill } from 'react-icons/bs';
+import { BsWordpress } from 'react-icons/bs';
 
 const Competences = () => {
     return (
@@ -33,7 +34,7 @@ const Competences = () => {
                         </article>
                         <article className="competences__details">
                             <BsPatchCheckFill className='competences__details-icon' />
-                            <div><h4>Boostrap</h4>
+                            <div><h4>WordPress</h4>
                                 <small className='text-light'>Intermédiaire</small></div>
                         </article>
                         <article className="competences__details">
