@@ -1,31 +1,57 @@
 import React from 'react';
-import './footer.css'
-import { FaFacebookF } from 'react-icons/fa';
-import { FiInstagram } from 'react-icons/fi';
-import LOGO_IMG_TEXT_BLANC from "../../assets/logo_text_img_blanc.svg";
-import { IoLogoTwitter } from 'react-icons/io';
-import { BsTiktok } from "react-icons/bs";
+import './footer.css';
+import ME_IMG from "../../assets/moi-font-bleu.jpg";
+import ISO_1 from "../../assets/iso.jpeg";
+import ISO_2 from "../../assets/iso1.jpeg";
+import ISO_3 from "../../assets/iso2.jpeg";
 
 const Footer = () => {
-    return (
-        <footer id='footer'>
-            <a href="#" className="footer__logo">
-                <img src={LOGO_IMG_TEXT_BLANC} alt="logo metaPress" />
-            </a>
-            <ul className="permalinks">
-                <li><a href="#about">A propos de moi</a></li>
-                <li><a href="#competences">Mes competences</a></li>
-                <li><a href="#skills">Mes savoir-faire</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Mes coordonnées</a></li>
-            </ul>
-            {/* <div className="footer__socials">
-                <a href="https://www.tiktok.com/@metapress0?_t=8dvCX1y6RGV&_r=1" target='_blank'><BsTiktok /></a>
-                <a href="https://www.facebook.com/profile.php?id=100094334454502&mibextid=ZbWKwL" target='_blank'><FaFacebookF /></a>
-                <a href="https://twitter.com/TekoFolly575148?t=mM0jNSo2w17L-7KctMXuAA&s=09" target='_blank'><IoLogoTwitter /></a>
-            </div> */}
-        </footer>
-    );
+  return (
+    <footer id='footer' className='container'>
+      <div className="profil-container">
+        <div id="one" className="bg-container">
+          <img src={ISO_1} alt="" />
+        </div>
+        <div id="two" className="bg-container">
+          <img src={ISO_2} alt="" />
+        </div>
+        <div id="three" className="bg-container">
+          <img src={ISO_3} alt="" />
+        </div>
+        <div className="photo-container">
+          <div className="image-content">
+            <img src={ME_IMG} alt="" />
+          </div>
+        </div>
+        <div className="infos">
+          <h2>Teko Fabrice FOLLY</h2>
+          <span className="occupation">DEVELOPPEUR LOGICIEL</span>
+        </div>
+        <div className="contact">
+          <div className="contact-infos">
+            <div className="infos-content">
+              <a href="#" className="contact-link"><i className="fa-solid fa-envelope"></i></a>
+              <a href="#" className="contact-link"> <i className="fa-regular fa-paper-plane"></i></a>
+              <a href="#" className="contact-link"><i className="fa-solid fa-mobile-screen-button"></i></a>
+            </div>
+            <div className="personnal-contact">
+              <ul>
+                <li>Téléphone: +33 7 45 17 88 05</li>
+                <li>E-mail: tekofabricefolly@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <div className="contact-form">
+            <form action="f">
+              <input type="text" name="name" placeholder="Votre nom complet" />
+              <input type="email" name="email" placeholder="Votre email" />
+              <textarea name="message" placeholder="Votre message" cols="30" rows="10"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
