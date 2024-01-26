@@ -3,11 +3,13 @@
         transform-origin: center;
         transform: rotate(0deg);
     }
+
     to {
         transform-origin: center;
         transform: rotate(360deg);
     }
 }
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -25,6 +27,7 @@
 
 
 }
+
 .nav-list .ai {
     display: block;
     height: 4rem;
@@ -37,6 +40,7 @@
     transform-origin: center;
     font-size: 2rem;
 }
+
 .nav-list .ai a {
     display: flex;
     align-items: center;
@@ -45,4 +49,11 @@
     transform-origin: center;
     animation: rotate 7s linear infinite;
     color: var(--color-bg);
+}
+
+/*==================MEDIA QUERIES (SMALL DEVICE)*/
+@media screen and (max-width: 600px) {
+    .nav-list {
+        gap: 2rem;
+    }
 }

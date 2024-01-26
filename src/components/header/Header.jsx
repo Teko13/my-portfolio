@@ -11,9 +11,9 @@ const Header = () => {
                 <div className="me">
                     <img src={ME} alt="" />
                 </div>
-                <h5>Hello Moi c'est</h5>
+                <h5>Hello Moi, c'est</h5>
                 <h1>Teko Fabrice</h1>
-                <h5 className="text-light">Developpeur Fullstack</h5>
+                <h5 className="text-light">Développeur Web</h5>
                 <HeaderSocial />
                 <CTA />
             </div>

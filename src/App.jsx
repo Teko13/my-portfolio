@@ -20,7 +20,7 @@ const App = () => {
             <Skills />
             <Portfolio />
             <Footer />
-            <Nav_temp />
+            <Nav />
             <Chat />
         </div>
     );

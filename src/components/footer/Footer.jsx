@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 import ME_IMG from "../../assets/moi-font-bleu.jpg";
+import { FaWhatsapp } from "react-icons/fa";
+import { CiMobile1 } from "react-icons/ci";
 import ISO_1 from "../../assets/iso.jpeg";
 import ISO_2 from "../../assets/iso1.jpeg";
+import { SiGmail } from "react-icons/si";
 import ISO_3 from "../../assets/iso2.jpeg";
+import axios from 'axios';
 
 const Footer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const handlSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    const url = "https://serveur.metapressnet.com/contact";
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+    axios.post(url, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then((respose) => {
+        setName("");
+        setEmail("");
+        setMessage('');
+        alert("Votre moessage a bien été envoyé");
+      })
+      .catch(() => {
+        console.log("zrror");
+        alert("Une erreur est survenu")
+      })
+  }
   return (
     <footer id='footer' className='container'>
       <div className="profil-container">
@@ -25,14 +55,14 @@ const Footer = () => {
         </div>
         <div className="infos">
           <h2>Teko Fabrice FOLLY</h2>
-          <span className="occupation">DEVELOPPEUR LOGICIEL</span>
+          <span className="occupation">DEVELOPPEUR WEB</span>
         </div>
         <div className="contact">
           <div className="contact-infos">
             <div className="infos-content">
-              <a href="#" className="contact-link"><i className="fa-solid fa-envelope"></i></a>
-              <a href="#" className="contact-link"> <i className="fa-regular fa-paper-plane"></i></a>
-              <a href="#" className="contact-link"><i className="fa-solid fa-mobile-screen-button"></i></a>
+              <a href="mailto:ffabrice999@gmail.com" className="contact-link"><SiGmail className="link-logo" /></a>
+              <a href="https://wa.me/33745178805" className="contact-link"><FaWhatsapp className="link-logo" /></a>
+              <a href="tel:+33745178805" className="contact-link"><CiMobile1 className="link-logo" /></a>
             </div>
             <div className="personnal-contact">
               <ul>
@@ -42,10 +72,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="contact-form">
-            <form action="f">
-              <input type="text" name="name" placeholder="Votre nom complet" />
-              <input type="email" name="email" placeholder="Votre email" />
-              <textarea name="message" placeholder="Votre message" cols="30" rows="10"></textarea>
+            <form onSubmit={(e) => handlSubmit(e)}>
+              <input onChange={(e) => setName(e.target.value)} type="text" name="name" placeholder="Votre nom complet" required />
+              <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Votre email" required />
+              <textarea onChange={(e) => setMessage(e.target.value)} name="message" placeholder="Votre message" cols="30" rows="10" required></textarea>
+              <button className="btn btn-primary">Envoyer</button>
             </form>
           </div>
         </div>
